@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodgius - Soluções Inovadoras</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Habilita a troca de tema por classe
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            primary: '#3b82f6', // Azul principal
+                            secondary: '#8b5cf6', // Roxo
+                            accent: '#38bdf8' // Azul claro
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Transição suave global para a troca de tema */
+        body { transition: background-color 0.3s ease, color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-[#0b1120] dark:text-slate-300 font-sans overflow-x-hidden selection:bg-brand-primary selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 backdrop-blur-xl bg-white/70 dark:bg-[#0b1120]/80 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-900 dark:text-white tracking-wider flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center text-white text-sm">P</div>
+                PROD<span class="text-brand-primary">GIUS</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="font-medium hover:text-brand-primary dark:hover:text-brand-accent transition-colors">Home</a>
+                <a href="#foco" class="font-medium hover:text-brand-primary dark:hover:text-brand-accent transition-colors">Foco</a>
+                <a href="#projetos" class="font-medium hover:text-brand-primary dark:hover:text-brand-accent transition-colors">Projetos</a>
+                <a href="#time" class="font-medium hover:text-brand-primary dark:hover:text-brand-accent transition-colors">Time</a>
+                
+                <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full text-sm p-2.5 transition-colors">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.32a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-1.32 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-1.32a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm1.32-4.22a1 1 0 010-1.415l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0zM10 5a5 5 0 100 10 5 5 0 000-10z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary/20 dark:bg-brand-primary/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-secondary/20 dark:bg-brand-secondary/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-[100px] animate-pulse delay-1000"></div>
+
+        <div class="container mx-auto px-6 text-center z-10">
+            <h1 data-aos="fade-down" class="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
+                Engenharia de Software <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
+                    Sob Medida
+                </span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto">
+                Transformamos desafios complexos em sistemas inteligentes. Otimize seus processos e impulsione o crescimento da sua empresa com tecnologia de ponta.
+            </p>
+            <div data-aos="zoom-in" data-aos-delay="400" class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#projetos" class="bg-brand-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-600 transition-all shadow-lg shadow-brand-primary/30 hover:-translate-y-1">
+                    Ver Nossos Projetos
+                </a>
+                <a href="#foco" class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-all hover:-translate-y-1">
+                    Conhecer Soluções
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="foco" class="py-24 bg-white dark:bg-[#0f172a] transition-colors">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-brand-primary font-semibold tracking-wider uppercase text-sm">Especialidades</span>
+                <h2 data-aos="fade-up" class="text-4xl font-bold text-slate-900 dark:text-white mt-2">Nosso Foco Principal</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:shadow-brand-primary/10 transition-all group">
+                    <div class="w-14 h-14 bg-blue-100 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Sistemas ERP & Estoque</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Gestão completa para sua empresa. Controle entradas, saídas, automatize pedidos e gere relatórios com precisão.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:shadow-brand-secondary/10 transition-all group">
+                    <div class="w-14 h-14 bg-purple-100 dark:bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Plataformas Web</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Desenvolvimento de sistemas robustos e painéis administrativos para otimizar o fluxo de trabalho da sua equipe.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:shadow-green-500/10 transition-all group">
+                    <div class="w-14 h-14 bg-green-100 dark:bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Soluções IoT</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Conecte o mundo físico ao digital. Monitore dados de sensores e automatize hardware em tempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="py-24 bg-slate-100 dark:bg-[#0b1120] transition-colors relative">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <span class="text-brand-secondary font-semibold tracking-wider uppercase text-sm">Portfólio</span>
+                    <h2 data-aos="fade-right" class="text-4xl font-bold text-slate-900 dark:text-white mt-2">Casos de Sucesso</h2>
+                </div>
+                <a href="#" data-aos="fade-left" class="mt-4 md:mt-0 text-brand-primary font-medium hover:underline flex items-center gap-2">
+                    Ver todos os produtos <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-aos="fade-up" class="group relative rounded-3xl overflow-hidden bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                    <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="bg-brand-primary text-white text-xs font-bold px-3 py-1 rounded-full">Produto Próprio</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Redgtech Automação</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">Plataforma completa de automação sob encomenda, integrando painéis de controle e hardware para gestão inteligente.</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs font-medium bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-md">React</span>
+                            <span class="text-xs font-medium bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-md">Node.js</span>
+                            <span class="text-xs font-medium bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-md">IoT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="group relative rounded-3xl overflow-hidden bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                    <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?q=80&w=800&auto=format&fit=crop" alt="App Legal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-6">
+                            <span class="bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">Parceiro</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Sistema Legal Ops</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-4">Desenvolvimento de sistema para otimização de fluxos jurídicos, focado na "Noemillie Mota Advocacia".</p>
+                        <div class="flex gap-2">
+                            <span class="text-xs font-medium bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-md">PHP</span>
+                            <span class="text-xs font-medium bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-md">MySQL</span>
+                            <span class="text-xs font-medium bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-md">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="time" class="py-24 bg-white dark:bg-[#0f172a] transition-colors">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 data-aos="fade-up" class="text-4xl font-bold text-slate-900 dark:text-white">Conheça nosso <span class="text-brand-primary">Time</span></h2>
+                <p class="mt-4 text-slate-600 dark:text-slate-400">Profissionais apaixonados por inovação contínua.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 text-center group border border-slate-200 dark:border-slate-700 hover:border-brand-primary dark:hover:border-brand-primary transition-all shadow-sm hover:shadow-xl">
+                    <img src="https://ui-avatars.com/api/?name=Luan+Cerqueira&background=0D8ABC&color=fff&size=150" alt="Luan" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white dark:border-slate-900 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white">Luan Cerqueira</h4>
+                    <p class="text-brand-primary text-sm font-semibold mb-4">CEO</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-400">Foco em inovação contínua e crescimento constante em um ambiente dinâmico.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 text-center group border border-slate-200 dark:border-slate-700 hover:border-brand-primary dark:hover:border-brand-primary transition-all shadow-sm hover:shadow-xl">
+                    <img src="https://ui-avatars.com/api/?name=Victor+Santos&background=8B5CF6&color=fff&size=150" alt="Victor" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white dark:border-slate-900 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white">Victor Santos</h4>
+                    <p class="text-brand-primary text-sm font-semibold mb-4">Full Stack</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-400">Valoriza a tecnologia e investe no desenvolvimento técnico da equipe.</p>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="300" class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 text-center group border border-slate-200 dark:border-slate-700 hover:border-brand-primary dark:hover:border-brand-primary transition-all shadow-sm hover:shadow-xl">
+                    <img src="https://ui-avatars.com/api/?name=Noemille+Mota&background=10B981&color=fff&size=150" alt="Noemille" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white dark:border-slate-900 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white">Noemille Mota</h4>
+                    <p class="text-brand-primary text-sm font-semibold mb-4">Legal Ops</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-400">Expandindo o conhecimento jurídico em um ecossistema colaborativo.</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="400" class="bg-slate-50 dark:bg-slate-800 rounded-3xl p-6 text-center group border border-slate-200 dark:border-slate-700 hover:border-brand-primary dark:hover:border-brand-primary transition-all shadow-sm hover:shadow-xl">
+                    <img src="https://ui-avatars.com/api/?name=Italo+Saraiva&background=F59E0B&color=fff&size=150" alt="Ítalo" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-white dark:border-slate-900 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                    <h4 class="text-xl font-bold text-slate-900 dark:text-white">Ítalo Saraiva</h4>
+                    <p class="text-brand-primary text-sm font-semibold mb-4">BackEnd</p>
+                    <p class="text-xs text-slate-600 dark:text-slate-400">Criando arquiteturas e APIs robustas para impulsionar nossos serviços.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-100 dark:bg-[#070b14] py-8 border-t border-slate-200 dark:border-slate-800 text-center transition-colors">
+        <p class="text-slate-500 text-sm font-medium">Prodgius © 2026 - Desenvolvido com inovação.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa as animações
+        AOS.init({ once: true, offset: 50, duration: 800 });
+
+        // Lógica do Dark/Light Mode
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Checa o estado inicial e altera os ícones
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            themeToggleDarkIcon.classList.remove('hidden');
+            document.documentElement.classList.remove('dark');
+        }
+
+        // Função de click no botão
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
